@@ -4,5 +4,5 @@
 
 
 Helpful Repositories
-1. https://github.com/mosch/react-avatar-editor
 2. https://github.com/fengyuanchen/cropperjs
+3. https://github.com/dimsemenov/Magnific-Popup

@@ -1,13 +1,13 @@
-var image = document.getElementById('image');
-var cropper = new Cropper(image, {
-  aspectRatio: 16 / 9,
-  crop: function(e) {
-    console.log(e.detail.x);
-    console.log(e.detail.y);
-    console.log(e.detail.width);
-    console.log(e.detail.height);
-    console.log(e.detail.rotate);
-    console.log(e.detail.scaleX);
-    console.log(e.detail.scaleY);
-  }
+$('.list-group a').magnificPopup({
+   type:'inline',
+   fixedContentPos: false,
+   removalDelay: 200,
+   showCloseBtn: false,
+   mainClass: 'mfp-fade'
+
+});
+
+$(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
 });

@@ -6,19 +6,18 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/photon.min.css">
-  <link rel="stylesheet" href="../css/animate.css">
-  <link rel="import" href="node_modules/xel/xel.min.html">
-  <link rel="stylesheet" href="node_modules/xel/stylesheets/galaxy.theme.css">
+  <link rel="stylesheet" href="css/cropperMain.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link rel="stylesheet" href="../css/photobooth.css">
-  <link href="node_modules/cropperjs/dist/cropper.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/photobooth.css">
+  <link href="node_modules/cropperjs/src/css/cropper.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 
   <!-- Javascript -->
-  <script src="js/photobooth.js" charset="utf-8"></script>
-  <script src="node_modules/cropperjs/dist/cropper.js"></script>
+
+  <script src="node_modules/cropperjs/src/js/cropper.js"></script>
 
 
 </head>
@@ -37,10 +36,10 @@
         <div class="pane pane-sm sidebar">
           <nav class="nav-group">
             <span class="nav-group-item active">
-                <span class="icon icon-home"></span> Light
+                <span class="icon icon-light-up"></span> Light
             </span>
             <span class="nav-group-item">
-                <span class="icon icon-light-up"></span> Dark
+                <span class="icon icon-moon"></span> Dark
             </span>
           </nav>
         </div>
@@ -53,19 +52,85 @@
               <h4 id="title">Animals</h4>
             </div>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\tiger.jpg"></li>
-              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\horse.jpg"></li>
-              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\turtle.jpg"></li>
-              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\deer.jpg"></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
           </div>
 
         </div>
+
         <!-- Pane Content Ends Here -->
       </div>
     </div>
   </div>
+
+  <div id="pick1" class="popup-modal mfp-hide">
+
+    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+    <div class="description-box">
+      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+    </div>
+
+    <div class="link-box">
+      <a target="blank" href="#"> Try It Out!</a>
+      <a target="blank" href="#"> Choose File</a>
+      <a class="popup-modal-dismiss">Done</a>
+    </div>
+
+  </div>
+  <div id="pick2" class="popup-modal mfp-hide">
+
+    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+
+    <div class="description-box">
+      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+    </div>
+
+    <div class="link-box">
+      <a target="blank" href="#"> Try It Out!</a>
+      <a target="blank" href="#"> Choose File</a>
+      <a class="popup-modal-dismiss">Done</a>
+    </div>
+
+  </div>
+  <div id="pick3" class="popup-modal mfp-hide">
+    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+    <div class="description-box">
+      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+    </div>
+
+    <div class="link-box">
+      <a target="blank" href="#"> Try It Out!</a>
+      <a target="blank" href="#"> Choose File</a>
+      <a class="popup-modal-dismiss">Done</a>
+    </div>
+
+  </div>
+  <div id="pick4" class="popup-modal mfp-hide">
+
+    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+    <div class="description-box">
+      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+    </div>
+
+    <div class="link-box">
+      <a target="blank" href="#"> Try It Out!</a>
+      <a target="blank" href="#"> Choose File</a>
+      <a class="popup-modal-dismiss">Done</a>
+    </div>
+
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/photobooth.js" charset="utf-8"></script>
+  <script src="js/cropper2.js"></script>
 </body>
 
 </html>

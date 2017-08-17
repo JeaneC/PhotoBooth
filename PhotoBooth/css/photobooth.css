@@ -1,0 +1,121 @@
+h1 {
+  color: white;
+}
+
+.window {
+  /*background: rgb(12, 10, 10);*/
+  background: white;
+}
+
+.sidebar {
+  background: #74cfae;
+}
+
+.nav-group-item {
+  color: black;
+}
+
+.nav-group-item.active, .nav-group-item:active{
+  background-color: rgba(161, 213, 194, 0.96);
+}
+
+.card {
+  margin: auto;
+  width: 384px;
+  border: 3px solid green;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#card2 {
+  width: 100px;
+  margin-left: 20px;
+}
+
+h4 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+
+  max-width: 340px;
+
+}
+
+#frame{
+  padding: 10px;
+  padding-bottom: 0px;
+  margin: 0 auto;
+
+}
+#label {
+  padding-left: 30%;
+}
+
+#title {
+  margin-bottom: 0;
+}
+
+.btn .icon, .toolbar-header .title {
+  margin-top: 3px;
+}
+#spot {
+  padding: 2px;
+  border-bottom: none;
+}
+
+.img-upload-btn {
+    position: relative;
+    overflow: hidden;
+    padding-top: 95%;
+}
+
+.img-upload-btn input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.img-upload-btn i {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
+.btn-radio {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-radio input[type=radio] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
