@@ -35,11 +35,43 @@
       <div class="pane-group">
         <div class="pane pane-sm sidebar">
           <nav class="nav-group">
-            <span class="nav-group-item active">
-                <span class="icon icon-light-up"></span> Light
+            <h5 class="nav-group-title">Themes</h5>
+            <span class="nav-group-item">
+                Light
             </span>
             <span class="nav-group-item">
-                <span class="icon icon-moon"></span> Dark
+                Dark
+            </span>
+            <h5 class="nav-group-title">Amount</h5>
+            <span class="nav-group-item">
+                    <span id="down" onclick="modify_qty(-1)">-</span><span id="qty">1</span><span id="up" onclick="modify_qty(1)">+</span>
+            </span>
+            <h5 class="nav-group-title">Templates</h5>
+            <span class="nav-group-item">
+                BFF
+            </span>
+            <span class="nav-group-item">
+                The One
+            </span>
+            <span class="nav-group-item">
+                My Love
+            </span>
+            <h5 class="nav-group-title">Backgrounds</h5>
+            <span class="nav-group-item">
+              Bubbles
+            </span>
+            <span class="nav-group-item">
+              Party
+            </span>
+            <h5 class="nav-group-title">Filters</h5>
+            <span class="nav-group-item">
+                No Filter
+            </span>
+            <span class="nav-group-item">
+                Vintage
+            </span>
+            <span class="nav-group-item">
+                Black/White
             </span>
           </nav>
         </div>
@@ -47,7 +79,43 @@
 
         <!-- Pane Content  -->
         <div class="pane">
-          <div class="card" >
+          <div id="card1" class="card" >
+            <div class="card-block">
+              <h4 id="title">Animals</h4>
+            </div>
+            <ul id ="frame" class="list-group list-group-flush">
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+            </ul>
+
+          </div>
+          <div id="card2" class="card hide" >
+            <div class="card-block">
+              <h4 id="title">Animals</h4>
+            </div>
+            <ul id ="frame" class="list-group list-group-flush">
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+            </ul>
+
+          </div>
+          <div id="card3" class="card hide" >
+            <div class="card-block">
+              <h4 id="title">Animals</h4>
+            </div>
+            <ul id ="frame" class="list-group list-group-flush">
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+            </ul>
+
+          </div>
+          <div id="card4" class="card hide" >
             <div class="card-block">
               <h4 id="title">Animals</h4>
             </div>
@@ -71,12 +139,12 @@
 
     <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
     <div class="description-box">
-      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+      <p> I need to put helper text here</p>
     </div>
 
     <div class="link-box">
-      <a target="blank" href="#"> Try It Out!</a>
       <a target="blank" href="#"> Choose File</a>
+      <!-- <a target="blank" href="#"> Trya it Out</a> -->
       <a class="popup-modal-dismiss">Done</a>
     </div>
 
@@ -86,12 +154,12 @@
     <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
 
     <div class="description-box">
-      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+      <p> I need to put helper text here</p>
     </div>
 
     <div class="link-box">
-      <a target="blank" href="#"> Try It Out!</a>
       <a target="blank" href="#"> Choose File</a>
+
       <a class="popup-modal-dismiss">Done</a>
     </div>
 
@@ -99,12 +167,12 @@
   <div id="pick3" class="popup-modal mfp-hide">
     <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
     <div class="description-box">
-      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+      <p> I need to put helper text here</p>
     </div>
 
     <div class="link-box">
-      <a target="blank" href="#"> Try It Out!</a>
       <a target="blank" href="#"> Choose File</a>
+
       <a class="popup-modal-dismiss">Done</a>
     </div>
 
@@ -113,12 +181,12 @@
 
     <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
     <div class="description-box">
-      <p>jList was a tool I created out of convenience. Often times I'm using the Notes App on my iPhone to make simple notes or lists, but sometimes when I'm on the computer, I want to have a permanent list somewhere. jList allows me to create lists <strong>online</strong>        and access it on web or mobile. I can create a million lists with a million items and find it in seconds.</p>
+      <p> I need to put helper text here</p>
     </div>
 
     <div class="link-box">
-      <a target="blank" href="#"> Try It Out!</a>
       <a target="blank" href="#"> Choose File</a>
+
       <a class="popup-modal-dismiss">Done</a>
     </div>
 

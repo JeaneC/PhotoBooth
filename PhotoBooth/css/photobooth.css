@@ -21,16 +21,31 @@ h1 {
 
 .card {
   margin: auto;
+  float: left;
   width: 384px;
   border: 3px solid green;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
+
+#card1 {
+  margin-left: 35%;
+  /*margin-left: 35%, makes one, align in the center*/
+}
+
 #card2 {
-  width: 100px;
-  margin-left: 20px;
+
+  /*margin-left: 20px;*/
+}
+
+div.hide {
+  visibility: hidden;
+}
+
+.link-box, .popup-modal-dismiss a{
+  color: white;
 }
 
 h4 {
@@ -59,14 +74,29 @@ img {
   margin-bottom: 0;
 }
 
-.btn .icon, .toolbar-header .title {
-  margin-top: 3px;
-}
+
 #spot {
   padding: 2px;
   border-bottom: none;
 }
 
+#down {
+  margin: 10px;
+  margin-left: 0;
+
+}
+
+#up {
+  margin: 10px;
+
+}
+
+
+
+
+.btn .icon, .toolbar-header .title {
+  margin-top: 3px;
+}
 .img-upload-btn {
     position: relative;
     overflow: hidden;
