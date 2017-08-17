@@ -1,0 +1,13 @@
+{
+  "name": "PhotoBooth",
+  "version": "1.0.0",
+  "description": "Creating A PhotoBooth Like Photo Strip",
+  "main": "app.js",
+  "author": "Jeane Carlos",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^1.7.5"
+  }
+}
