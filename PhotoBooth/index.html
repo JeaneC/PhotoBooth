@@ -1,43 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PhotoBooth</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/photon.min.css">
+<head>
+  <title>PhotoBooth</title>
 
-    <!-- Javascript -->
-    <script src="js/menu.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="window">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/photon.min.css">
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="import" href="node_modules/xel/xel.min.html">
+  <link rel="stylesheet" href="node_modules/xel/stylesheets/galaxy.theme.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="../css/photobooth.css">
+  <link href="node_modules/cropperjs/dist/cropper.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-      <!-- .toolbar-header sits at the top of your app -->
-      <header class="toolbar toolbar-header">
-        <h1 class="title">PhotoBooth</h1>
-      </header>
 
-      <!-- Your app's content goes inside .window-content -->
-      <div class="window-content">
-        <div class="pane-group">
-          <div class="pane pane-sm sidebar">
-            <nav class="nav-group">
-              <span class="nav-group-item active">
-                <span class="icon icon-home"></span>
-                Default
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-light-up"></span>
-                Color
-              </span>
-            </nav>
-          </div>
+  <!-- Javascript -->
+  <script src="js/photobooth.js" charset="utf-8"></script>
+  <script src="node_modules/cropperjs/dist/cropper.js"></script>
 
-          <div class="pane">
 
-          </div>
+</head>
+
+<body>
+  <div class="window">
+
+    <!-- .toolbar-header sits at the top of your app -->
+    <header class="toolbar toolbar-header">
+      <h1 class="title">PhotoBooth</h1>
+    </header>
+
+    <!-- Your app's content goes inside .window-content -->
+    <div class="window-content">
+      <div class="pane-group">
+        <div class="pane pane-sm sidebar">
+          <nav class="nav-group">
+            <span class="nav-group-item active">
+                <span class="icon icon-home"></span> Light
+            </span>
+            <span class="nav-group-item">
+                <span class="icon icon-light-up"></span> Dark
+            </span>
+          </nav>
         </div>
+
+
+        <!-- Pane Content  -->
+        <div class="pane">
+          <div class="card" >
+            <div class="card-block">
+              <h4 id="title">Animals</h4>
+            </div>
+            <ul id ="frame" class="list-group list-group-flush">
+              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\tiger.jpg"></li>
+              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\horse.jpg"></li>
+              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\turtle.jpg"></li>
+              <li class="list-group-item" id="spot"><img id="image" src="assets\imgs\deer.jpg"></li>
+            </ul>
+
+          </div>
+
+        </div>
+        <!-- Pane Content Ends Here -->
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
