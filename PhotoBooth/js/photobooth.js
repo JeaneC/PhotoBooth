@@ -2,6 +2,7 @@
 //   alert("Hello");
 // });
 var cardSelected = "card1"
+
 $('h4').click(function(){
   var $this = $(this);
   var $input = $('<input>', {
@@ -39,14 +40,44 @@ $('.list-group a').magnificPopup({
 $('#form').on('change', function (e) {
     var optionSelected = $("option:selected", this);
     var valueSelected = this.value;
-    $('h4').css('font-family', valueSelected);
+    $('#' + cardSelected + ' h4').css('font-family', valueSelected);
 });
 
 $('#form1').on('change', function (e) {
     var optionSelected = $("option:selected", this);
     var valueSelected = this.value;
-    cardSelected = "card" + valueSelected
-    alert(cardSelected)
+    $('#' + cardSelected + ' h4').css('color', valueSelected);
+});
+
+$('#form2').on('change', function (e) {
+    var optionSelected = $("option:selected", this);
+    var valueSelected = this.value + "rem";
+    //cardSelected = 1
+    $('#' + cardSelected + ' h4').css('font-size', valueSelected);
+});
+
+$('#form3').on('change', function (e) {
+    var optionSelected = $("option:selected", this);
+    var image = this.value
+    console.log(cardSelected)
+    if (image == "clear"){
+      $("#" + cardSelected).css('background-image', 'none');
+    } else {
+      var imageURL = "../PhotoBooth/assets/imgs/" + image + ".jpg"
+      $("#" + cardSelected).css('background-image', 'url(' + imageURL + ')');
+    }
+
+});
+//
+// $('#form4').on('change', function (e) {
+//     var optionSelected = $("option:selected", this);
+//     var valueSelected = this.value + "rem";
+//     $('#title').css('font-size', valueSelected);
+// });
+
+$('#form5').on('change', function (e) {
+    var optionSelected = $("option:selected", this);
+    cardSelected = "card" + this.value
 });
 
 function green() {
@@ -78,19 +109,7 @@ function blue() {
 //
 // }
 //
-$('.background').click(function(){
-  var image = $(this).attr('id');
-  if (image == "clear"){
-    $('.card').css('background-image', 'none');
-  } else {
-    var imageURL = "../PhotoBooth/assets/imgs/" + image + ".jpg"
-    $('.card').css('background-image', 'url(' + imageURL + ')');
-  }
 
-
-
-
-})
 
 
 
@@ -115,6 +134,11 @@ function modify_qty(val) {
     console.log(new_qty);
 
     document.getElementById('qty').textContent = new_qty;
+    if (new_qty==1){
+      $('#card1').css('margin-left',"35%")
+    } else {
+      $('.card').css('margin-left',"10%")
+    }
 
     //Gotta hide or not hide stuff
     if (new_qty > qty){ //User added
@@ -128,6 +152,7 @@ function modify_qty(val) {
 }
 
 // Need to create safe m
+// This will not work well when switching between options
 function modify_qty2(val) {
     console.log(val)
     var qty2 = document.getElementById('qty2').textContent;
@@ -139,11 +164,12 @@ function modify_qty2(val) {
     }
     document.getElementById('qty2').textContent = new_qty2;
 
+    // $('#card1 li#spot1')
     //Gotta hide or not hide stuff
     if (new_qty2 > qty2){ //User added
-      $('#spot'+ String(new_qty2)).toggleClass("hide");
+      $('#'+ cardSelected + ' li#spot'+ String(new_qty2)).toggleClass("hide");
     } else { //User Removed
-      $('#spot'+ String(qty2)).toggleClass("hide");
+      $('#'+ cardSelected + ' li#spot'+ String(qty2)).toggleClass("hide");
     }
 
 

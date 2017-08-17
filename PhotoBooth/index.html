@@ -40,7 +40,7 @@
                 Pastel Blue
             </span>
             <span onclick="red()" id="red" class="nav-group-item">
-                Soothing Red
+                Ashy Red
             </span>
             <span onclick="green()" id="green" class="nav-group-item">
                 Galaxy Green
@@ -53,16 +53,12 @@
 
             <h5 class="nav-group-title">Strip Select</h5>
             <span class="nav-group-item">
-                <input type="checkbox" checked value="1"> Strip 1
-            </span>
-            <span class="nav-group-item">
-                <input type="checkbox" value="2"> Strip 2
-            </span>
-            <span class="nav-group-item">
-                <input type="checkbox" value="3"> Strip 3
-            </span>
-            <span class="nav-group-item">
-                <input type="checkbox" value="4"> Strip 4
+              <select id ="form5" class="form-control">
+                <option selected="selected" value="1">Strip 1</option>
+                <option value="2">Strip 2</option>
+                <option value="3">Strip 3</option>
+                <option value="4">Strip 4</option>
+              </select>
             </span>
 
             <h5 class="nav-group-title">Fonts</h5>
@@ -78,9 +74,29 @@
 
               </select>
             </span>
+            <span class="nav-group-item">
+              <select id ="form1" class="form-control">
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <!-- <option style="font-family: 'Baloo Bhaina', cursive;" value="Baloo Bhaina">Other</option> -->
+
+              </select>
+            </span>
+            <span class="nav-group-item">
+              <select id ="form2" class="form-control">
+                <option value="2.0">2</option>
+                <option selected="selected" value="3.0">3</option>
+                <option value="4.0">4</option>
 
 
-            <h5 class="nav-group-title">Templates</h5>
+              </select>
+            </span>
+
+
+            <!-- <h5 class="nav-group-title">Templates</h5>
             <span class="nav-group-item">
                 BFF
             </span>
@@ -89,29 +105,25 @@
             </span>
             <span class="nav-group-item">
                 My Love
-            </span>
+            </span> -->
             <h5 class="nav-group-title">Backgrounds</h5>
-            <span id="clear" class="nav-group-item background" value="none">
-              No Background
+            <span class="nav-group-item">
+              <select id ="form3" class="form-control">
+                <option selected="selected" value="clear">No Background</option>
+                <option value="Nebula">Nebula</option>
+                <option value="Light">Light</option>
+                <option value="Sparkle">Sparkle</option>
+              </select>
             </span>
-            <span id="Nebula" class="nav-group-item background" value="nebula">
-              Nebula
-            </span>
-            <span id="Light"class="nav-group-item background" value="light">
-              Light
-            </span>
-            <span id="Sparkle"class="nav-group-item background" value="sparkle">
-              Sparkle
-            </span>
+
             <h5 class="nav-group-title">Filters</h5>
             <span class="nav-group-item">
-                No Filter
-            </span>
-            <span class="nav-group-item">
-                Vintage
-            </span>
-            <span class="nav-group-item">
-                Black/White
+              <select id ="form4" class="form-control">
+                <option selected="selected" value="No Background">No Filter</option>
+                <option value="Nebula">Vintage</option>
+                <option value="Light">Black/White</option>
+                <option value="Sparkle">Sephia</option>
+              </select>
             </span>
             <h5 class="nav-group-title">File</h5>
             <span class="nav-group-item">
@@ -137,7 +149,7 @@
               <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
               <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
               <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
-              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick5"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
           </span>
