@@ -1,10 +1,29 @@
 // document.getElementById('test').addEventListener("click", function(){
 //   alert("Hello");
 // });
+var cardSelected = "card1"
+$('h4').click(function(){
+  var $this = $(this);
+  var $input = $('<input>', {
+      value: $this.text(),
+      type: 'text',
+      class: 'test',
+      blur: function() {
+        if (this.value == "") {
+          $this.text("Animal")
+        } else {
+        $this.text(this.value);
+      }
 
-$('#test').click(function(){
-  alert("Hello");
+      },
+      keyup: function(e) {
+         if (e.which === 13) $input.blur();
+      }
+  }).appendTo( $this.empty() ).focus();
 })
+
+
+
 $('.list-group a').magnificPopup({
    type:'inline',
    fixedContentPos: false,
@@ -15,31 +34,64 @@ $('.list-group a').magnificPopup({
 });
 
 
+
+
 $('#form').on('change', function (e) {
     var optionSelected = $("option:selected", this);
     var valueSelected = this.value;
-    $('#title').css('font-family', valueSelected);
+    $('h4').css('font-family', valueSelected);
+});
+
+$('#form1').on('change', function (e) {
+    var optionSelected = $("option:selected", this);
+    var valueSelected = this.value;
+    cardSelected = "card" + valueSelected
+    alert(cardSelected)
 });
 
 function green() {
   $('.sidebar').css('background', '#74cfae');
-  $('#mainPane').css('background', 'black');
+  $('#mainPane').css('background', 'rgba(0, 0, 0, 0.83)');
   $('.nav-group-title').css('color', 'black');
   $('.nav-group-item').css('color', 'black');
+  $('.card').css('border', '2px solid black');
 }
 
 function red() {
   $('.sidebar').css('background', '#ff4343');
-  $('#mainPane').css('background', 'white');
+  $('#mainPane').css('background', '#dddddd');
   $('.nav-group-title').css('color', 'white');
   $('.nav-group-item').css('color', 'white');
+  $('.card').css('border', '2px solid #ff4343');
 }
 
 function blue() {
   $('.sidebar').css('background', 'rgba(97, 134, 254, 0.97)');
-  $('#mainPane').css('background', 'white');
+  $('#mainPane').css('background', 'rgba(100, 94, 255, 0.19)');
+  $('.nav-group-item').css('color', 'white');
   $('.nav-group-title').css('color', 'white');
+  $('.card').css('border', '2px solid rgba(97, 134, 254, 0.97)');
 }
+
+// This is the better way to do it
+// function changeBackground(val) {
+//
+// }
+//
+$('.background').click(function(){
+  var image = $(this).attr('id');
+  if (image == "clear"){
+    $('.card').css('background-image', 'none');
+  } else {
+    var imageURL = "../PhotoBooth/assets/imgs/" + image + ".jpg"
+    $('.card').css('background-image', 'url(' + imageURL + ')');
+  }
+
+
+
+
+})
+
 
 
 $(document).on('click', '.popup-modal-dismiss', function (e) {
@@ -62,13 +114,6 @@ function modify_qty(val) {
     const defMarg = 30;
     console.log(new_qty);
 
-    var newMarg = defMarg - (20)*(new_qty-1)
-    if (new_qty > 2) {
-      newMarg = 10;
-    }
-    console.log(newMarg)
-
-    $('#card1').css('margin-left', newMarg +'%');
     document.getElementById('qty').textContent = new_qty;
 
     //Gotta hide or not hide stuff

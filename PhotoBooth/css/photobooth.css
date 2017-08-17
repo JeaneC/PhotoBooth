@@ -1,12 +1,13 @@
-
-.nav-group-item {
+span.nav-group-item {
   font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: white;
 }
 
 .nav-group-title {
-  font-size: 15px;
+  font-size: 18px;
   font-family: 'Playfair Display', serif;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -17,8 +18,8 @@ h1 {
 
 
 div.card-block {
-  margin-top: 7%;
-  margin-bottom: 7%;
+  margin-top: 6%;
+  margin-bottom: 6%;
 }
 .window {
   /*background: rgb(12, 10, 10);*/
@@ -32,7 +33,18 @@ select.form-control {
   height: 10px;
   font-size: 14px;
 }
+input[type=checkbox] {
+  /*padding-top: 10px;*/
 
+
+}
+#form1{
+  height: 20px;
+  padding: 0;
+  margin-bottom: 5px;
+  border: none;
+
+}
 #form {
   height: 20px;
   padding: 0;
@@ -40,7 +52,7 @@ select.form-control {
 }
 
 .sidebar {
-  background: #74cfae;
+  background: rgba(97, 134, 254, 0.97);
 }
 
 .nav-group-item {
@@ -51,52 +63,40 @@ select.form-control {
   background-color: rgba(161, 213, 194, 0.96);
 }
 .pane.main{
-  background: black;
+  background: rgba(100, 94, 255, 0.19);
   padding-left: 10%;
   white-space: nowrap;
-
+  overflow-x: auto;
 }
 
 
 
 .card {
   float: left;
+  display: inline;
   margin-left: 10%;
   height: 1152px;
   width: 384px;
-  border: 3px solid green;
+
   padding: 10px;
   padding-top, padding-bottom: 0;
   margin-top: 20px;
   margin-bottom: 20px;
 
-}
 
+}
 
 #card1 {
-
-  margin-left: 30%;
-  /*margin-left: 35%, makes one, align in the center*/
-}
-
-#card2 {
-  margin-left: 0;
-
-  /*margin-left: 20px;*/
-}
-#card3 {
-  margin-top: 0;
-  margin-left: 10%;
+  /*background-image: url("../assets/imgs/Dandelion.jpg");*/
 
 }
 
-#card4 {
-  margin-top: 0;
-  margin-left: 0;
-
+span.card {
+  border: 2px solid rgba(97, 134, 254, 0.97)
 }
 
-div.hide {
+
+span.hide {
   display: none;
 }
 
@@ -116,6 +116,7 @@ img {
   display: block;
   margin: auto;
 
+  padding-right: 0px;
   max-width: 100%;
   min-height: 100%;
 
@@ -130,12 +131,17 @@ img {
 li.list-group-item {
   width: 346px;
   height: 333px;
+  margin-bottom: 3px;
+  background-color: unset;
+  border-top: none;
 }
 
 #frame{
   padding: 10px;
   padding-bottom: 0px;
   margin: 0 auto;
+  padding-left: 7px;
+  padding-right: 6px;
 
 }
 #label {
@@ -147,6 +153,7 @@ li.list-group-item {
   text-align: center;
   font-size: 3.0rem;
   margin: 0 auto;
+  line-height: 4.0rem;
 }
 
 
@@ -226,11 +233,12 @@ li.list-group-item {
     display: block;
 }
 
-#playfair {
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
+.test{
+  font-size: 3.0rem;
+  text-align: center;
+  width: 70%;
+  color: red;
 }
-
-select {
-  font-family: inherit;
+.test:focus {
+  outline: none
 }

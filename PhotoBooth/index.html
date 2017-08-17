@@ -36,20 +36,33 @@
         <div class="pane pane-sm sidebar">
           <nav class="nav-group">
             <h5 class="nav-group-title">Themes</h5>
-            <span onclick="green()" id="green" class="nav-group-item">
-                Space Green
+            <span onclick="blue()"id="blue" class="nav-group-item">
+                Pastel Blue
             </span>
             <span onclick="red()" id="red" class="nav-group-item">
                 Soothing Red
             </span>
-            <span onclick="blue()"id="blue" class="nav-group-item">
-                Pastel Blue
+            <span onclick="green()" id="green" class="nav-group-item">
+                Galaxy Green
             </span>
-
             <h5 class="nav-group-title">Strip/Picture Amount</h5>
             <span class="nav-group-item">
-                    <span id="down" onclick="modify_qty(-1)">-</span><span id="qty">1</span><span id="up" onclick="modify_qty(1)">+</span>
-                    <span id="down" onclick="modify_qty2(-1)">-</span><span id="qty2">4</span><span id="up" onclick="modify_qty2(1)">+</span>
+                <span id="down" onclick="modify_qty(-1)">-</span><span id="qty">1</span><span id="up" onclick="modify_qty(1)">+</span>
+                <span id="down" onclick="modify_qty2(-1)">-</span><span id="qty2">4</span><span id="up" onclick="modify_qty2(1)">+</span>
+            </span>
+
+            <h5 class="nav-group-title">Strip Select</h5>
+            <span class="nav-group-item">
+                <input type="checkbox" checked value="1"> Strip 1
+            </span>
+            <span class="nav-group-item">
+                <input type="checkbox" value="2"> Strip 2
+            </span>
+            <span class="nav-group-item">
+                <input type="checkbox" value="3"> Strip 3
+            </span>
+            <span class="nav-group-item">
+                <input type="checkbox" value="4"> Strip 4
             </span>
 
             <h5 class="nav-group-title">Fonts</h5>
@@ -78,11 +91,17 @@
                 My Love
             </span>
             <h5 class="nav-group-title">Backgrounds</h5>
-            <span class="nav-group-item">
-              Bubbles
+            <span id="clear" class="nav-group-item background" value="none">
+              No Background
             </span>
-            <span class="nav-group-item">
-              Party
+            <span id="Nebula" class="nav-group-item background" value="nebula">
+              Nebula
+            </span>
+            <span id="Light"class="nav-group-item background" value="light">
+              Light
+            </span>
+            <span id="Sparkle"class="nav-group-item background" value="sparkle">
+              Sparkle
             </span>
             <h5 class="nav-group-title">Filters</h5>
             <span class="nav-group-item">
@@ -94,6 +113,13 @@
             <span class="nav-group-item">
                 Black/White
             </span>
+            <h5 class="nav-group-title">File</h5>
+            <span class="nav-group-item">
+                Export As...
+            </span>
+            <span class="nav-group-item">
+                Upload To Imgur
+            </span>
           </nav>
         </div>
 
@@ -101,11 +127,11 @@
         <!-- Pane Content  -->
         <div id="mainPane"class="pane main">
 
-          <div id="card1" class="card" >
-            <div class="card-block">
+          <span id="card1" class="card" >
+            <span class="card-block">
               <h4 id="title">Animals</h4>
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
-            </div>
+            </span>
             <ul id ="frame" class="list-group list-group-flush">
               <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
               <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
@@ -114,44 +140,50 @@
               <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
-          </div>
-          <div id="card2" class="card hide" >
-            <div class="card-block">
+          </span>
+          <span id="card2" class="card hide" >
+            <span class="card-block">
               <h4 id="title">Animals</h4>
-            </div>
+              <!-- <input type="email" class="form-control" placeholder="Email"> -->
+            </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
-          </div>
+          </span>
 
-          <div id="card3" class="card hide" >
-            <div class="card-block">
+          <span id="card3" class="card hide" >
+            <span class="card-block">
               <h4 id="title">Animals</h4>
-            </div>
+              <!-- <input type="email" class="form-control" placeholder="Email"> -->
+            </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
-          </div>
-          <div id="card4" class="card hide" >
-            <div class="card-block">
+          </span>
+          <span id="card4" class="card hide" >
+            <span class="card-block">
               <h4 id="title">Animals</h4>
-            </div>
+              <!-- <input type="email" class="form-control" placeholder="Email"> -->
+            </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
-          </div>
+          </span>
 
         </div>
 

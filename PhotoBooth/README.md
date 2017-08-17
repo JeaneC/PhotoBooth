@@ -11,7 +11,10 @@ Commits (Will go into detail after completion)
 - Started adding user functionality, and multiple strips
 5. Commit E
 - User can change themes and fonts on click (I think this is cool)
-
+6. Commit F
+- Backgrounds fixed
+- Fixed alignment on certain elements
+- Updated UI More
 
 1. npm install electron --save-dev﻿
 2. npm install jquery --save
