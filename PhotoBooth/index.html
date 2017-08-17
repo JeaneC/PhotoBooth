@@ -4,20 +4,20 @@
 <head>
   <title>PhotoBooth</title>
 
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/photon.min.css">
   <link rel="stylesheet" href="css/cropperMain.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Baloo+Bhaina|Limelight|Lobster|Permanent+Marker|Playfair+Display" rel="stylesheet">
   <link rel="stylesheet" href="css/photobooth.css">
   <link href="node_modules/cropperjs/src/css/cropper.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 
-  <!-- Javascript -->
-
-  <script src="node_modules/cropperjs/src/js/cropper.js"></script>
+  <script> window.$ = window.jQuery = require('jquery/dist/jquery.js');</script>
 
 
 </head>
@@ -36,16 +36,37 @@
         <div class="pane pane-sm sidebar">
           <nav class="nav-group">
             <h5 class="nav-group-title">Themes</h5>
-            <span class="nav-group-item">
-                Light
+            <span onclick="green()" id="green" class="nav-group-item">
+                Space Green
             </span>
-            <span class="nav-group-item">
-                Dark
+            <span onclick="red()" id="red" class="nav-group-item">
+                Soothing Red
             </span>
-            <h5 class="nav-group-title">Amount</h5>
+            <span onclick="blue()"id="blue" class="nav-group-item">
+                Pastel Blue
+            </span>
+
+            <h5 class="nav-group-title">Strip/Picture Amount</h5>
             <span class="nav-group-item">
                     <span id="down" onclick="modify_qty(-1)">-</span><span id="qty">1</span><span id="up" onclick="modify_qty(1)">+</span>
+                    <span id="down" onclick="modify_qty2(-1)">-</span><span id="qty2">4</span><span id="up" onclick="modify_qty2(1)">+</span>
             </span>
+
+            <h5 class="nav-group-title">Fonts</h5>
+            <span class="nav-group-item">
+              <select id ="form" class="form-control">
+                <option style="font-family: 'Roboto', sans-serif;" value="Roboto">Roboto</option>
+                <option style="font-family: 'Anton', sans-serif;" value="Anton">Anton</option>
+                <option style="font-family: 'Playfair Display', serif;" value="Playfair Display">Playfair</option>
+                <option style="font-family: 'Permanent Marker', cursive;" value="Permanent Marker">Permanent Marker</option>
+                <option style="font-family: 'Lobster', cursive;" value="Lobster">Lobster</option>
+                <option style="font-family: 'Limelight', cursive;" value="Limelight">Limelight</option>
+                <option style="font-family: 'Baloo Bhaina', cursive;" value="Baloo Bhaina">Baloo</option>
+
+              </select>
+            </span>
+
+
             <h5 class="nav-group-title">Templates</h5>
             <span class="nav-group-item">
                 BFF
@@ -78,16 +99,19 @@
 
 
         <!-- Pane Content  -->
-        <div class="pane">
+        <div id="mainPane"class="pane main">
+
           <div id="card1" class="card" >
             <div class="card-block">
               <h4 id="title">Animals</h4>
+              <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </div>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
           </div>
@@ -103,6 +127,7 @@
             </ul>
 
           </div>
+
           <div id="card3" class="card hide" >
             <div class="card-block">
               <h4 id="title">Animals</h4>
@@ -196,6 +221,9 @@
     src="https://code.jquery.com/jquery-3.2.1.js"
     integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
     crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="js/jquery.magnific-popup.js"></script>
   <script src="js/photobooth.js" charset="utf-8"></script>
   <script src="js/cropper2.js"></script>

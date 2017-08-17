@@ -11,6 +11,7 @@
     "electron": "^1.7.5"
   },
   "dependencies": {
-    "cropperjs": "^1.0.0-rc.3"
+    "cropperjs": "^1.0.0-rc.3",
+    "jquery": "^3.2.1"
   }
 }

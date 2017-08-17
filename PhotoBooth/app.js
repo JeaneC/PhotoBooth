@@ -2,6 +2,7 @@ const electron = require('electron')
 const {app, BrowserWindow} = electron
 var Cropper = require('cropperjs')
 
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 var mainWindow = null;
@@ -27,7 +28,7 @@ app.on('ready', function() {
     'accept-first-mouse': true,
     'title-bar-style': 'hidden'
   });
-  mainWindow.setMenu(null);
+  // mainWindow.setMenu(null);
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
