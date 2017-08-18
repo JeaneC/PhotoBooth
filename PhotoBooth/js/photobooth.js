@@ -25,15 +25,15 @@ $('h4').click(function(){
 })
 
 
-
-$('.list-group a').magnificPopup({
-   type:'inline',
-   fixedContentPos: false,
-   removalDelay: 200,
-   showCloseBtn: false,
-   mainClass: 'mfp-fade'
-
-});
+//
+// $('.list-group a').magnificPopup({
+//    type:'inline',
+//    fixedContentPos: false,
+//    removalDelay: 200,
+//    showCloseBtn: false,
+//    mainClass: 'mfp-fade'
+//
+// });
 
 
 
@@ -87,6 +87,7 @@ function green() {
   $('.nav-group-title').css('color', 'black');
   $('.nav-group-item').css('color', 'black');
   $('.card').css('border', '2px solid black');
+  $('div.modal-content').css('background', '#74cfae');
 }
 
 function red() {
@@ -95,6 +96,7 @@ function red() {
   $('.nav-group-title').css('color', 'white');
   $('.nav-group-item').css('color', 'white');
   $('.card').css('border', '2px solid #ff4343');
+  $('div.modal-content').css('background', '#ff4343');
 }
 
 function blue() {
@@ -103,6 +105,7 @@ function blue() {
   $('.nav-group-item').css('color', 'white');
   $('.nav-group-title').css('color', 'white');
   $('.card').css('border', '2px solid rgba(97, 134, 254, 0.97)');
+  $('div.modal-content').css('background', 'rgba(97, 134, 254, 0.97)');
 }
 
 // This is the better way to do it
@@ -190,7 +193,7 @@ function changeImage(val) {
           // the result image data
           image.src = e.target.result;
           imageSave = image.src
-          $('#i' + val).attr("src",image.src)
+          $('#modalImage').attr("src",image.src)
 
        }
 
@@ -199,11 +202,52 @@ function changeImage(val) {
 }
 
 
-var popL = document.getElementsByClassName('popup-modal-dismiss');
 
 
-for (var i = 0; i < popL.length; i++) {
-  popL[i].addEventListener("click", function(){
-    $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("src",imageSave)
-  });
+function updateImage(){
+  $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("src",imageSave)
+  $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("width","100%")
 }
+
+
+/////////////////////////////
+// $(function () {
+//   var $image = $('#modalImage');
+//   var cropBoxData;
+//   var canvasData;
+//
+//   $('#modal').on('shown.bs.modal', function () {
+//     $image.cropper({
+//       autoCropArea: 0.5,
+//       ready: function () {
+//         $image.cropper('setCanvasData', canvasData);
+//         $image.cropper('setCropBoxData', cropBoxData);
+//       }
+//     });
+//   }).on('hidden.bs.modal', function () {
+//     cropBoxData = $image.cropper('getCropBoxData');
+//     canvasData = $image.cropper('getCanvasData');
+//     $image.cropper('destroy');
+//   });
+// });
+
+function crop() {
+
+    var $image = $('#modalImage');
+    var cropBoxData;
+    var canvasData;
+    $image.cropper({
+      autoCropArea: 0.5,
+      ready: function () {
+        $image.cropper('setCanvasData', canvasData);
+        $image.cropper('setCropBoxData', cropBoxData);
+      }
+    });
+
+    $('#modal').on('hidden.bs.modal', function () {
+      cropBoxData = $image.cropper('getCropBoxData');
+      canvasData = $image.cropper('getCanvasData');
+      $image.cropper('destroy');
+    });
+
+ }

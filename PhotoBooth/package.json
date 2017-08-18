@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "cropperjs": "^1.0.0-rc.3",
+    "croppie": "^2.5.0",
     "jquery": "^3.2.1"
   }
 }

@@ -7,14 +7,14 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/photon.min.css">
-  <link rel="stylesheet" href="css/cropperMain.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anton|Baloo+Bhaina|Limelight|Lobster|Permanent+Marker|Playfair+Display" rel="stylesheet">
   <link rel="stylesheet" href="css/photobooth.css">
-  <link href="node_modules/cropperjs/src/css/cropper.css" rel="stylesheet">
+  <link href="node_modules/cropperjs/dist/cropper.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.0/croppie.css" rel="stylesheet">
 
 
   <script> window.$ = window.jQuery = require('jquery/dist/jquery.js');</script>
@@ -143,13 +143,14 @@
             <span class="card-block">
               <h4 id="title">Title</h4>
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
+              <!-- <button type="button" class="btn btn-primary" data-target="#modal" data-toggle="modal"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot1" onclick="imageIndex=1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot2" onclick="imageIndex=2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot3" onclick="imageIndex=3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot4" onclick="imageIndex=4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
-              <li class="list-group-item hide" id="spot5" onclick="imageIndex=5"><a id ="picker" href="#pick5"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1" onclick="imageIndex=1"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2" onclick="imageIndex=2"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3" onclick="imageIndex=3"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4" onclick="imageIndex=4"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5" onclick="imageIndex=5"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\light.jpg"></a></li>
             </ul>
 
           </span>
@@ -159,11 +160,11 @@
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
-              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1" onclick="imageIndex=1"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2" onclick="imageIndex=2"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3" onclick="imageIndex=3"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4" onclick="imageIndex=4"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5" onclick="imageIndex=5"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\light.jpg"></a></li>
             </ul>
 
           </span>
@@ -174,11 +175,11 @@
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
-              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1" onclick="imageIndex=1"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2" onclick="imageIndex=2"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3" onclick="imageIndex=3"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4" onclick="imageIndex=4"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5" onclick="imageIndex=5"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\light.jpg"></a></li>
             </ul>
 
           </span>
@@ -188,15 +189,46 @@
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
-              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1" onclick="imageIndex=1"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2" onclick="imageIndex=2"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3" onclick="imageIndex=3"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4" onclick="imageIndex=4"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5" onclick="imageIndex=5"><a type="button" data-target="#modal" data-toggle="modal"><img id="image" src="assets\imgs\light.jpg"></a></li>
             </ul>
 
           </span>
 
+            <!-- <div class="container">
+              <h1>Cropper with responsive container</h1>
+              <div>
+                <img id="image1" src="assets\imgs\tiger.jpg" alt="Picture">
+              </div>
+            </div> -->
+
+
+            <div class="container">
+              <!-- Modal -->
+              <div class="modal fade" id="modal" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <input id="file" type="file" onchange="changeImage(1);">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <div>
+                        <img id="modalImage" src="assets/imgs/tiger.jpg" alt="Picture" style="border:none; width:100%">
+                      </div>
+                    </div>
+                    <div id="modal" class="modal-footer">
+                      <button id="button"type="button" class="btn btn-default" onclick="crop()">Crop</button>
+
+                      <button id="dButton" type="button" class="btn btn-default" data-dismiss="modal" onclick="updateImage()">Done</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
         <!-- Pane Content Ends Here -->
@@ -204,67 +236,6 @@
     </div>
   </div>
 
-  <div id="pick1" class="popup-modal mfp-hide">
-    <img  id="i1" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-
-
-    <div class="link-box">
-      <input id="file" type="file" onchange="changeImage(1);">
-
-      <a class="popup-modal-dismiss">Done</a>
-    </div>
-
-  </div>
-
-
-  <div id="pick2" class="popup-modal mfp-hide">
-
-    <img  id="i2" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-
-
-    <div class="link-box">
-      <input id="file" type="file" onchange="changeImage(2);">
-      <a class="popup-modal-dismiss">Done</a>
-
-    </div>
-
-  </div>
-  <div id="pick3" class="popup-modal mfp-hide">
-    <img id="i3" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-
-
-    <div class="link-box">
-      <input id="file" type="file" onchange="changeImage(3);">
-      <a class="popup-modal-dismiss">Done</a>
-
-    </div>
-
-  </div>
-  <div id="pick4" class="popup-modal mfp-hide">
-
-    <img  id="i4" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-
-
-    <div class="link-box">
-      <input id="file" type="file" onchange="changeImage(4);">
-      <a class="popup-modal-dismiss">Done</a>
-
-    </div>
-
-  </div>
-
-  <div id="pick5" class="popup-modal mfp-hide">
-
-    <img  id="i5" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-
-
-    <div class="link-box">
-      <input id="file" type="file" onchange="changeImage(5);">
-      <a class="popup-modal-dismiss">Done</a>
-
-    </div>
-
-  </div>
 
   <script
     src="https://code.jquery.com/jquery-3.2.1.js"
@@ -274,8 +245,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="js/jquery.magnific-popup.js"></script>
+
+  <script src="js/cropper.js"></script>
   <script src="js/photobooth.js" charset="utf-8"></script>
-  <script src="js/cropper2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.0/croppie.js"></script>
+
 </body>
 
 </html>

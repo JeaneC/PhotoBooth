@@ -16,6 +16,21 @@ h1 {
 
 }
 
+#file {
+  font-family: 'Playfair Display', serif;
+  float: left;
+  color: white;
+}
+
+#modal {
+  font-family: 'Playfair Display', serif;
+}
+.modal.show .modal-dialog{
+  margin-top: 5%;
+  margin-left: 40%
+
+}
+
 
 div.card-block {
   margin-top: 6%;
@@ -84,6 +99,9 @@ span.card {
   border: 2px solid rgba(97, 134, 254, 0.97)
 }
 
+div.modal-content {
+  background: rgba(97, 134, 254, 0.97);
+}
 
 span.hide {
   display: none;
@@ -91,6 +109,10 @@ span.hide {
 
 li.hide {
   display: none;
+}
+.list-group * {
+  width: 100%;
+  height: 100%;
 }
 
 .link-box, .popup-modal-dismiss a{
