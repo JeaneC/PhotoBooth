@@ -141,21 +141,21 @@
 
           <span id="card1" class="card" >
             <span class="card-block">
-              <h4 id="title">Animals</h4>
+              <h4 id="title">Title</h4>
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
-              <li class="list-group-item" id="spot1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
-              <li class="list-group-item" id="spot2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
-              <li class="list-group-item" id="spot3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
-              <li class="list-group-item" id="spot4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
-              <li class="list-group-item hide" id="spot5"><a id ="picker" href="#pick5"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item" id="spot1" onclick="imageIndex=1"><a id ="picker" href="#pick1"><img id="image" src="assets\imgs\tiger.jpg"></a></li>
+              <li class="list-group-item" id="spot2" onclick="imageIndex=2"><a id ="picker" href="#pick2"><img id="image" src="assets\imgs\horse.jpg"></a></li>
+              <li class="list-group-item" id="spot3" onclick="imageIndex=3"><a id ="picker" href="#pick3"><img id="image" src="assets\imgs\turtle.jpg"></a></li>
+              <li class="list-group-item" id="spot4" onclick="imageIndex=4"><a id ="picker" href="#pick4"><img id="image" src="assets\imgs\deer.jpg"></a></li>
+              <li class="list-group-item hide" id="spot5" onclick="imageIndex=5"><a id ="picker" href="#pick5"><img id="image" src="assets\imgs\deer.jpg"></a></li>
             </ul>
 
           </span>
           <span id="card2" class="card hide" >
             <span class="card-block">
-              <h4 id="title">Animals</h4>
+              <h4 id="title">Title</h4>
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
@@ -170,7 +170,7 @@
 
           <span id="card3" class="card hide" >
             <span class="card-block">
-              <h4 id="title">Animals</h4>
+              <h4 id="title">Title</h4>
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
@@ -184,7 +184,7 @@
           </span>
           <span id="card4" class="card hide" >
             <span class="card-block">
-              <h4 id="title">Animals</h4>
+              <h4 id="title">Title</h4>
               <!-- <input type="email" class="form-control" placeholder="Email"> -->
             </span>
             <ul id ="frame" class="list-group list-group-flush">
@@ -205,58 +205,63 @@
   </div>
 
   <div id="pick1" class="popup-modal mfp-hide">
+    <img  id="i1" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
 
-    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-    <div class="description-box">
-      <p> I need to put helper text here</p>
-    </div>
 
     <div class="link-box">
-      <a target="blank" href="#"> Choose File</a>
-      <!-- <a target="blank" href="#"> Trya it Out</a> -->
+      <input id="file" type="file" onchange="changeImage(1);">
+
       <a class="popup-modal-dismiss">Done</a>
     </div>
 
   </div>
+
+
   <div id="pick2" class="popup-modal mfp-hide">
 
-    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+    <img  id="i2" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
 
-    <div class="description-box">
-      <p> I need to put helper text here</p>
-    </div>
 
     <div class="link-box">
-      <a target="blank" href="#"> Choose File</a>
-
+      <input id="file" type="file" onchange="changeImage(2);">
       <a class="popup-modal-dismiss">Done</a>
+
     </div>
 
   </div>
   <div id="pick3" class="popup-modal mfp-hide">
-    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-    <div class="description-box">
-      <p> I need to put helper text here</p>
-    </div>
+    <img id="i3" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+
 
     <div class="link-box">
-      <a target="blank" href="#"> Choose File</a>
-
+      <input id="file" type="file" onchange="changeImage(3);">
       <a class="popup-modal-dismiss">Done</a>
+
     </div>
 
   </div>
   <div id="pick4" class="popup-modal mfp-hide">
 
-    <img class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
-    <div class="description-box">
-      <p> I need to put helper text here</p>
-    </div>
+    <img  id="i4" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+
 
     <div class="link-box">
-      <a target="blank" href="#"> Choose File</a>
-
+      <input id="file" type="file" onchange="changeImage(4);">
       <a class="popup-modal-dismiss">Done</a>
+
+    </div>
+
+  </div>
+
+  <div id="pick5" class="popup-modal mfp-hide">
+
+    <img  id="i5" class="mfp-image" src="assets/imgs/tiger.jpg" width="700" height="400" scrolling="no" style="border:none; max-width:100%"></img>
+
+
+    <div class="link-box">
+      <input id="file" type="file" onchange="changeImage(5);">
+      <a class="popup-modal-dismiss">Done</a>
+
     </div>
 
   </div>

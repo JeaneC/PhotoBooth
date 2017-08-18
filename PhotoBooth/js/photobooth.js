@@ -2,7 +2,8 @@
 //   alert("Hello");
 // });
 var cardSelected = "card1"
-
+var imageIndex = 0
+var imageSave
 $('h4').click(function(){
   var $this = $(this);
   var $input = $('<input>', {
@@ -177,4 +178,32 @@ function modify_qty2(val) {
 
 
     return new_qty2;
+}
+
+function changeImage(val) {
+  imageIndex = val
+  var file = document.getElementById('file').files[0];
+      var reader = new FileReader();
+      // it's onload event and you forgot (parameters)
+      reader.onload = function(e)  {
+          var image = document.createElement("img");
+          // the result image data
+          image.src = e.target.result;
+          imageSave = image.src
+          $('#i' + val).attr("src",image.src)
+
+       }
+
+       // you have to declare the file loading
+       reader.readAsDataURL(file);
+}
+
+
+var popL = document.getElementsByClassName('popup-modal-dismiss');
+
+
+for (var i = 0; i < popL.length; i++) {
+  popL[i].addEventListener("click", function(){
+    $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("src",imageSave)
+  });
 }
