@@ -1,7 +1,7 @@
 {
   "name": "PhotoBooth",
   "version": "1.0.0",
-  "description": "Creating A PhotoBooth Like Photo Strip",
+  "description": "Putting Memories In A Photostrip",
   "main": "app.js",
   "author": "Jeane Carlos",
   "scripts": {
@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "cropperjs": "^1.0.0-rc.3",
-    "croppie": "^2.5.0",
     "jquery": "^3.2.1"
   }
 }

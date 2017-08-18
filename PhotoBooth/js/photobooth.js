@@ -4,6 +4,7 @@
 var cardSelected = "card1"
 var imageIndex = 0
 var imageSave
+var toggled = false;
 $('h4').click(function(){
   var $this = $(this);
   var $input = $('<input>', {
@@ -205,8 +206,21 @@ function changeImage(val) {
 
 
 function updateImage(){
-  $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("src",imageSave)
+  var $image = $('#modalImage');
+
+
+
+  if (toggled == true) {
+    var dataURL = $image.cropper('getCroppedCanvas').toDataURL();
+    $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("src", dataURL)
+  } else {
+    $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("src", imageSave)
+  }
+
+
   $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("width","100%")
+  $('#' + cardSelected + ' #spot' + imageIndex+ ' img').attr("height","100%")
+  toggled = false
 }
 
 
@@ -232,10 +246,11 @@ function updateImage(){
 // });
 
 function crop() {
-
+    toggled = true
     var $image = $('#modalImage');
     var cropBoxData;
     var canvasData;
+
     $image.cropper({
       autoCropArea: 0.5,
       ready: function () {
