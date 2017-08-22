@@ -1,7 +1,7 @@
 {
   "name": "PhotoBooth",
   "version": "1.0.0",
-  "description": "Creating A PhotoBooth Like Photo Strip",
+  "description": "Putting Memories In A Photostrip",
   "main": "app.js",
   "author": "Jeane Carlos",
   "scripts": {
