@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "cropperjs": "^1.0.0-rc.3",
+    "electron-reload": "^1.2.1",
     "jquery": "^3.2.1"
   }
 }

@@ -2,6 +2,7 @@ const electron = require('electron')
 const {app, BrowserWindow} = electron
 var Cropper = require('cropperjs')
 
+require('electron-reload')(__dirname); //Electron Reload
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

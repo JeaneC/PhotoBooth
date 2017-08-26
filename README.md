@@ -1,30 +1,34 @@
 # PhotoBooth
 __Description__: The Easy Way To Store Memories In Photostrips
+__Note__: The demo version online is only semi-functional because the app now requires dependencies.
 
 
 Commits (Will go into detail after completion)
-1. __Initial Commit__
+
+__Initial Commit__
 - Loaded Photon Module
-2. __Commit B__
+__Commit B__
 - Created rough sketch of a basic photostrip.
-3. __Commic C__
+__Commic C__
 - Implemented Pop-Up
 - Properly fixed/implemented jquery
-4. __Commit D__
+__Commit D__
 - Started adding user functionality, and multiple strips
-5. __Commit E__
+__Commit E__
 - User can change themes and fonts on click.
-6. __Commit F__
+__Commit F__
 - Backgrounds fixed
 - Fixed alignment on certain elements
 - Updated UI More
-7. __Commit G__
+__Commit G__
 - Changed The Method Of Selecting Form Options
 - Changed options
-8. __Commit H__
+__Commit H__
 - Implemented CropperJS, tried to modify it to work for a pop-up modal.
-9. __Commit I__
+__Commit I__
 - Changed Pop-Up Modal (no longer using Magnific-Popup), and now Cropping JS crops properly
-10. __Commit J__
+__Commit J__
 - Added Website Download Page To Main Repository (StyleShout template)
 - Rewrote ReadMe documentation
+__Commit H__
+- Fixed the way auto-resizing works when changing between Picture amount.

@@ -5,6 +5,10 @@ var cardSelected = "card1"
 var imageIndex = 0
 var imageSave
 var toggled = false;
+
+const strip1 = new Strip(1)
+const strip2 = new Strip(2)
+
 $('h4').click(function(){
   var $this = $(this);
   var $input = $('<input>', {
@@ -125,6 +129,7 @@ $(document).on('click', '.popup-modal-dismiss', function (e) {
 
 
 // Need to create safe m
+//This modifies the number of strips
 function modify_qty(val) {
     var qty = document.getElementById('qty').textContent;
     var new_qty = parseInt(qty,10) + val;
@@ -157,9 +162,12 @@ function modify_qty(val) {
 }
 
 // Need to create safe m
+// This modifies the number of pictures
 // This will not work well when switching between options
 function modify_qty2(val) {
-    console.log(val)
+
+
+
     var qty2 = document.getElementById('qty2').textContent;
     var new_qty2 = parseInt(qty2,10) + val;
 
@@ -168,6 +176,14 @@ function modify_qty2(val) {
       return new_qty2
     }
     document.getElementById('qty2').textContent = new_qty2;
+
+    // Must modify the picture height
+    height = 1040/new_qty2
+    $('#' + cardSelected + ' li').css('height', height + 'px')
+
+
+    //End
+
 
     // $('#card1 li#spot1')
     //Gotta hide or not hide stuff
@@ -184,8 +200,7 @@ function modify_qty2(val) {
     return new_qty2;
 }
 
-function changeImage(val) {
-  imageIndex = val
+function changeImage() {
   var file = document.getElementById('file').files[0];
       var reader = new FileReader();
       // it's onload event and you forgot (parameters)

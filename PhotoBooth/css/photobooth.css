@@ -140,9 +140,10 @@ img {
 
 }
 
+/*This setting is the most annoying*/
 li.list-group-item {
   width: 346px;
-  height: 333px;
+  height: 260px;
   margin-bottom: 3px;
   background-color: unset;
   border-top: none;
